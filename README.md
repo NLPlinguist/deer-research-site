@@ -42,3 +42,11 @@ All deer images are hot-linked to public Wikimedia Commons URLs (verified workin
 ## Citing sources
 
 See the **Resources** page for books, articles, and websites the project can cite.
+
+## Live Site
+
+Once GitHub Pages is enabled (Settings → Pages → Deploy from GitHub Actions), the site is served at:
+
+https://nlpzach.github.io/deer-research-site/
+
+Any push to main automatically redeploys the site.
