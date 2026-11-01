@@ -46,6 +46,11 @@ nav.navbar .inner {
   padding: 12px 20px;
   flex-wrap: wrap;
 }
+nav.navbar .nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
 nav.navbar .brand {
   color: var(--accent-soft);
   font-weight: 800;
@@ -63,6 +68,27 @@ nav.navbar a.link {
 }
 nav.navbar a.link:hover { background: var(--moss); color: #fff; }
 nav.navbar a.link.active { background: var(--accent); color: #201a0c; font-weight: 700; }
+
+/* ---------- Page header bar ---------- */
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--forest);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 18px 24px;
+  margin: 0 0 26px;
+  box-shadow: var(--shadow);
+}
+.page-header .emoji { font-size: 2rem; line-height: 1; }
+.page-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #fff;
+  line-height: 1.2;
+}
+.page-header .header-text p { margin: 0; color: #cfe0d3; font-size: 0.95rem; }
 
 /* ---------- Layout ---------- */
 main {
