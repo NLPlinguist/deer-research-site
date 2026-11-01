@@ -1,0 +1,275 @@
+/* Deer Research Site - shared stylesheet */
+
+:root {
+  --forest: #1b3a2a;
+  --forest-dark: #0f2419;
+  --moss: #2f5d43;
+  --leaf: #5c8d6e;
+  --cream: #fdf6ec;
+  --paper: #fffaf2;
+  --accent: #e8a33d;
+  --accent-soft: #f5d9a8;
+  --ink: #233027;
+  --ink-soft: #4c5b4f;
+  --card: #ffffff;
+  --shadow: 0 6px 24px rgba(15, 36, 25, 0.12);
+  --radius: 18px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(180deg, #f2f7ee 0%, #fdf6ec 100%);
+  color: var(--ink);
+  line-height: 1.65;
+  font-size: 17px;
+}
+
+/* ---------- Navigation ---------- */
+nav.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--forest-dark);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+}
+nav.navbar .inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  flex-wrap: wrap;
+}
+nav.navbar .brand {
+  color: var(--accent-soft);
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  margin-right: 12px;
+}
+nav.navbar a.link {
+  color: #e9efe6;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: background 0.15s, color 0.15s;
+}
+nav.navbar a.link:hover { background: var(--moss); color: #fff; }
+nav.navbar a.link.active { background: var(--accent); color: #201a0c; font-weight: 700; }
+
+/* ---------- Layout ---------- */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: var(--forest);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 40px 30px;
+  text-align: center;
+  margin-bottom: 34px;
+  box-shadow: var(--shadow);
+}
+.hero h1 {
+  margin: 0 0 10px;
+  font-size: 2.4rem;
+  line-height: 1.15;
+}
+.hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #e9efe6;
+}
+.hero .hero-img {
+  width: 100%;
+  max-width: 760px;
+  margin: 22px auto 0;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  display: block;
+}
+
+/* ---------- Headings ---------- */
+h2 {
+  color: var(--forest);
+  font-size: 1.7rem;
+  margin: 0 0 6px;
+}
+h3 {
+  color: var(--moss);
+  font-size: 1.25rem;
+  margin: 26px 0 8px;
+}
+.section { margin-bottom: 34px; }
+.section-title {
+  border-left: 5px solid var(--accent);
+  padding-left: 14px;
+  margin-top: 8px;
+}
+
+/* ---------- Cards ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.card:hover { transform: translateY(-3px); }
+.card h3 { margin-top: 0; }
+.card p { color: var(--ink-soft); }
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  max-height: 300px;
+  object-fit: cover;
+}
+.card .tag {
+  display: inline-block;
+  background: var(--accent-soft);
+  color: #5b3c09;
+  border-radius: 20px;
+  padding: 3px 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* ---------- Fact boxes ---------- */
+.fact {
+  background: var(--paper);
+  border: 2px solid var(--accent-soft);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin: 18px 0;
+}
+.fact strong { color: var(--accent); }
+
+.quote {
+  background: #fff;
+  border-left: 5px solid var(--leaf);
+  padding: 12px 16px;
+  margin: 16px 0;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+/* ---------- Gallery ---------- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+.gallery figure { margin: 0; }
+.gallery img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+.gallery figcaption {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin-top: 6px;
+  text-align: center;
+}
+
+/* ---------- Lists ---------- */
+ul.clean, ol.clean {
+  padding-left: 1.3rem;
+}
+ul.clean li, ol.clean li { margin: 7px 0; }
+
+/* ---------- Links ---------- */
+a.inline-link {
+  color: var(--moss);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid var(--accent-soft);
+}
+a.inline-link:hover { background: var(--accent-soft); }
+
+/* ---------- Footer ---------- */
+footer {
+  background: var(--forest-dark);
+  color: #cfe0d3;
+  padding: 24px 20px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+footer a { color: var(--accent-soft); }
+
+/* ---------- Comparison table ---------- */
+table.compare {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 18px 0;
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+table.compare th, table.compare td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid #e6e0d4;
+}
+table.compare th {
+  background: var(--moss);
+  color: #fff;
+  font-weight: 700;
+}
+table.compare tr:nth-child(even) td { background: #f7f3ea; }
+
+/* ---------- Quiz / interactive ---------- */
+.quiz-box {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px;
+  margin: 20px 0;
+}
+.quiz-box h3 { margin-top: 0; color: var(--forest); }
+.quiz-box .q { margin-bottom: 16px; }
+.quiz-box .opt {
+  display: block;
+  background: #f4f7f2;
+  border: 1px solid #dfe6dd;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin: 8px 0;
+  cursor: pointer;
+}
+.quiz-box .opt:hover { background: var(--accent-soft); }
+.quiz-box .opt.correct { background: #d9f0d9; border-color: #6a9a6a; }
+.quiz-box .opt.wrong { background: #f3d9d9; border-color: #c78a8a; }
+.quiz-box .feedback { margin-top: 10px; font-weight: 600; }
+
+/* ---------- Glossary ---------- */
+.glossary dt { font-weight: 700; color: var(--forest); margin-top: 14px; }
+.glossary dd { margin-left: 16px; color: var(--ink-soft); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .hero h1 { font-size: 1.7rem; }
+  body { font-size: 16px; }
+  nav.navbar .inner { gap: 4px; }
+  nav.navbar a.link { padding: 5px 8px; font-size: 0.85rem; }
+}
