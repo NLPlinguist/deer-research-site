@@ -217,6 +217,7 @@ footer {
 footer a { color: var(--accent-soft); }
 
 /* ---------- Comparison table ---------- */
+.latin { font-style: italic; color: var(--ink-soft); font-size: 0.9em; }
 table.compare {
   width: 100%;
   border-collapse: collapse;
