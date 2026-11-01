@@ -50,3 +50,5 @@ Once GitHub Pages is enabled (Settings → Pages → Deploy from GitHub Actions)
 https://nlpzach.github.io/deer-research-site/
 
 Any push to main automatically redeploys the site.
+
+---
